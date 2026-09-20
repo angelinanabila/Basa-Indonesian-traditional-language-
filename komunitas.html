@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komunitas - Basa</title>
+
+    <link rel="stylesheet" href="komunitas.css">
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <a href="home.html">
+            <img
+                src="image/logo.png"
+                class="logo"
+                alt="Logo Basa"
+            >
+        </a>
+
+
+
+        <nav class="nav-links">
+
+            
+            <a href="home.html">
+                Beranda
+            </a>
+
+
+            
+            <select
+                class="nav-select"
+                onchange="location.href=this.value"
+            >
+
+                <option value="kursus.html">
+                    Bahasa
+                </option>
+
+                <option value="kursus.html#jawa">
+                    Bahasa Jawa
+                </option>
+
+                <option value="kursus.html#bali">
+                    Bahasa Bali
+                </option>
+
+                <option value="kursus.html#sunda">
+                    Bahasa Sunda
+                </option>
+
+                <option value="kursus.html#sunda">
+                    Bahasa Madura
+                </option>
+
+                <option value="kursus.html#sunda">
+                    Bahasa Batak
+                </option>
+
+            </select>
+
+
+           
+            <a href="komunitas.html">
+                Komunitas
+            </a>
+
+
+            
+            <a
+                href="login.html"
+                class="login-btn"
+            >
+                Masuk
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main class="container section">
+
+        <!-- Banner Header Komunitas -->
+        <section class="community-banner">
+            <h1>Komunitas Pembelajar Bahasa</h1>
+            <p>Diskusi, berbagi tips, dan latihan bahasa daerah bersama ribuan anggota dari seluruh Indonesia.</p>
+            
+            <!-- STATISTIK RINGKAS KOMUNITAS -->
+            <div class="community-stats">
+                <div class="stat-item">
+                    <h3>12.850+</h3>
+                    <p>Total Anggota</p>
+                </div>
+                <div class="stat-item">
+                    <h3>3.420+</h3>
+                    <p>Diskusi Aktif</p>
+                </div>
+                <div class="stat-item">
+                    <h3>5</h3>
+                    <p>Grup Bahasa</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEKSI GRUP KOMUNITAS PER BAHASA -->
+        <section class="language-groups-section">
+            <div class="section-header">
+                <h2>Grup Komunitas Daerah</h2>
+                <p>Bergabunglah ke dalam grup khusus bahasa daerah favoritmu untuk berdiskusi lebih intensif!</p>
+            </div>
+
+            <div class="community-cards-grid">
+                
+                <!-- Grup Jawa -->
+                <div class="group-card">
+                    <div class="group-card-header">
+                        <span class="group-icon">📜</span>
+                        <div>
+                            <h3>Paguyuban Basa Jawa</h3>
+                            <span class="member-count">👥 4.820 Anggota</span>
+                        </div>
+                    </div>
+                    <p>Wadah sinau bareng basa Jawa Ngoko, Krama, lan Unggah-ungguh.</p>
+                    <button class="join-btn" onclick="toggleJoin(this)">Gabung Grup</button>
+                </div>
+
+                <!-- Grup Bali -->
+                <div class="group-card">
+                    <div class="group-card-header">
+                        <span class="group-icon">🌺</span>
+                        <div>
+                            <h3>Pasraman Basa Bali</h3>
+                            <span class="member-count">👥 3.150 Anggota</span>
+                        </div>
+                    </div>
+                    <p>Melahang malajah basa Bali Alus lan Basa Bali Biasa sareng-sareng.</p>
+                    <button class="join-btn" onclick="toggleJoin(this)">Gabung Grup</button>
+                </div>
+
+                <!-- Grup Sunda -->
+                <div class="group-card">
+                    <div class="group-card-header">
+                        <span class="group-icon">🍃</span>
+                        <div>
+                            <h3>Paguyuban Basa Sunda</h3>
+                            <span class="member-count">👥 2.940 Anggota</span>
+                        </div>
+                    </div>
+                    <p>Ngalestarikeun Basa Sunda Loma & Lemes sasarengan warga Basa.</p>
+                    <button class="join-btn" onclick="toggleJoin(this)">Gabung Grup</button>
+                </div>
+
+                <!-- Grup Madura -->
+                <div class="group-card">
+                    <div class="group-card-header">
+                        <span class="group-icon">🌾</span>
+                        <div>
+                            <h3>Tretan Basa Madura</h3>
+                            <span class="member-count">👥 1.120 Anggota</span>
+                        </div>
+                    </div>
+                    <p>Asereng ajhar oca' ban tata basa Madura tor kabudayaan.</p>
+                    <button class="join-btn" onclick="toggleJoin(this)">Gabung Grup</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Layout Utama Komunitas (Grid 2 Kolom Feed & Sidebar) -->
+        <div class="community-grid">
+
+            <!-- Kolom Kiri: Feed Diskusi -->
+            <div class="community-feed">
+
+                <!-- Box Buat Postingan Baru -->
+                <div class="create-post-card">
+                    <h3>Buat Diskusi Baru</h3>
+                    <textarea placeholder="Tanyakan sesuatu atau bagikan ilmu bahasa daerahmu di sini..."></textarea>
+                    <div class="create-post-actions">
+                        <select class="select-tag">
+                            <option value="">Pilih Tag Bahasa</option>
+                            <option value="bali">Bahasa Bali</option>
+                            <option value="jawa">Bahasa Jawa</option>
+                            <option value="sunda">Bahasa Sunda</option>
+                        </select>
+                        <button class="post-btn">Kirim Postingan</button>
+                    </div>
+                </div>
+
+                <!-- Post 1 -->
+                <article class="post-card">
+                    <div class="post-header">
+                        <div class="user-info">
+                            <div class="avatar">G</div>
+                            <div>
+                                <h4>Gede Budi</h4>
+                                <span class="post-time">2 jam yang lalu</span>
+                            </div>
+                        </div>
+                        <span class="badge-tag">Bahasa Bali</span>
+                    </div>
+
+                    <div class="post-content">
+                        <p>Halo semuanya! Mau tanya dong, bedanya penggunaan kata <strong>"Majuang"</strong> sama <strong>"Malanjan"</strong> dalam konteks percakapan Bali Alus itu gimana ya? Terima kasih!</p>
+                    </div>
+
+                    <div class="post-footer">
+                        <button class="action-btn">💬 5 Komentar</button>
+                        <button class="action-btn">❤️ 12 Suka</button>
+                    </div>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="post-card">
+                    <div class="post-header">
+                        <div class="user-info">
+                            <div class="avatar blue-avatar">S</div>
+                            <div>
+                                <h4>Siti Rahma</h4>
+                                <span class="post-time">5 jam yang lalu</span>
+                            </div>
+                        </div>
+                        <span class="badge-tag">Bahasa Jawa</span>
+                    </div>
+
+                    <div class="post-content">
+                        <p>Tips simpel ngapalin Krama Inggil: Coba biasain ganti 3 kata dasar dulu tiap hari (misal: Mangan → Dhahar, Turu → Sare). Lama-lama jadi terbiasa tanpa harus ngapal mati!</p>
+                    </div>
+
+                    <div class="post-footer">
+                        <button class="action-btn">💬 18 Komentar</button>
+                        <button class="action-btn">❤️ 45 Suka</button>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Kolom Kanan: Sidebar Informasi & Topik -->
+            <aside class="community-sidebar">
+
+                <!-- Topik Populer -->
+                <div class="sidebar-card">
+                    <h3>Topik Populer</h3>
+                    <ul class="topic-list">
+                        <li><a href="#">#UnggahUngguhJawa <span>120 Diskusi</span></a></li>
+                        <li><a href="#">#BelajarBasaBali <span>85 Diskusi</span></a></li>
+                        <li><a href="#">#KosakataSunda <span>64 Diskusi</span></a></li>
+                        <li><a href="#">#AksaraKawi <span>32 Diskusi</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Anggota Aktif -->
+                <div class="sidebar-card">
+                    <h3>Kontributor Aktif</h3>
+                    <div class="active-users">
+                        <div class="user-row">
+                            <div class="avatar">B</div>
+                            <div>
+                                <strong>Bima Aksara</strong>
+                                <small>1.2k Reputasi</small>
+                            </div>
+                        </div>
+                        <div class="user-row">
+                            <div class="avatar red-avatar">N</div>
+                            <div>
+                                <strong>Ni Wayan</strong>
+                                <small>980 Reputasi</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-grid">
+
+            <div>
+                <img src="image/logo.png" class="footer-logo" alt="Logo Basa">
+                <p>Bersama melestarikan bahasa daerah, untuk Indonesia yang lebih berwarna.</p>
+            </div>
+
+            <div>
+                <h4>Navigasi</h4>
+                <p>
+                    <a href="home.html">Beranda</a><br>
+                    <a href="kursus.html">Kursus</a><br>
+                    <a href="komunitas.html">Komunitas</a>
+                </p>
+            </div>
+
+            <div>
+                <h4>Kontak</h4>
+                <p>
+                    Basa (Kak Bella)<br>
+                    basa.daerah@gmail.com<br>
+                    +628365154987
+                </p>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            2026 Learning app. All right reserved
+        </div>
+    </footer>
+
+    <!-- Script Tombol Gabung Interaktif -->
+    <script>
+        function toggleJoin(btn) {
+            if (btn.innerText === "Gabung Grup") {
+                btn.innerText = "✓ Bergabung";
+                btn.classList.add("joined");
+            } else {
+                btn.innerText = "Gabung Grup";
+                btn.classList.remove("joined");
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kursus Bahasa - Basa</title>
+
+    <link rel="stylesheet" href="kursus.css">
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <a href="home.html">
+            <img
+                src="image/logo.png"
+                class="logo"
+                alt="Logo Basa"
+            >
+        </a>
+
+
+    
+        <nav class="nav-links">
+
+            
+            <a href="home.html">
+                Beranda
+            </a>
+
+
+            
+            <select
+                class="nav-select"
+                onchange="location.href=this.value"
+            >
+
+                <option value="kursus.html">
+                    Bahasa
+                </option>
+
+                <option value="kursus.html#jawa">
+                    Bahasa Jawa
+                </option>
+
+                <option value="kursus.html#bali">
+                    Bahasa Bali
+                </option>
+
+                <option value="kursus.html#sunda">
+                    Bahasa Sunda
+                </option>
+
+                <option value="kursus.html#sunda">
+                    Bahasa Madura
+                </option>
+
+                <option value="kursus.html#sunda">
+                    Bahasa Batak
+                </option>
+
+            </select>
+
+
+           
+            <a href="komunitas.html">
+                Komunitas
+            </a>
+
+
+            
+            <a
+                href="login.html"
+                class="login-btn"
+            >
+                Masuk
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main class="container section">
+
+        <!-- LANJUTKAN BELAJAR-->
+        <section class="continue-section">
+            <h2 class="continue-title">Lanjutkan Belajar</h2>
+
+            <div class="continue-grid">
+
+                <!-- Card 1 -->
+                <div class="continue-card">
+                    <img src="image/jawa1.png" alt="Bahasa Jawa Level 3">
+                    <div class="continue-info">
+                        <h3>Bahasa Jawa Level 3: Takon Pitakon</h3>
+                        <p class="progress-text">Progress 80%</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%;"></div>
+                        </div>
+                        <a href="belajar-jawa.html" class="continue-btn">LANJUTKAN</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="continue-card">
+                    <img src="image/bali2.png" alt="Bahasa Bali Level 1">
+                    <div class="continue-info">
+                        <h3>Bahasa Bali Level 1: Om Swastiastu</h3>
+                        <p class="progress-text">Progress 30%</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 30%;"></div>
+                        </div>
+                        <a href="belajar-bali.html" class="continue-btn">LANJUTKAN</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- KURSUS BAHASA -->
+        <section class="course-section">
+
+            <h2 class="section-title-left">Kursus Bahasa</h2>
+
+            <!-- Kategori / Filter -->
+            <div class="course-categories">
+                <a href="#" class="category-item active">Semua</a>
+                <a href="#" class="category-item">Bahasa Jawa</a>
+                <a href="#" class="category-item">Bahasa Sunda</a>
+                <a href="#" class="category-item">Bahasa Madura</a>
+                <a href="#" class="category-item">Bahasa Bali</a>
+                <a href="#" class="category-item">Bahasa Bugis</a>
+            </div>
+
+            <!-- Grid Kursus -->
+            <div class="popular-grid">
+
+                <!-- Card 1: Bahasa Jawa -->
+                <article class="course-card" id="jawa">
+                    <img src="image/jawa1.png" alt="Bahasa Jawa">
+                    <h3>Bahasa Jawa</h3>
+                    <p>Pelajari kosakata dan percakapan sehari-hari serta unggah-ungguh.</p>
+                    <a href="kursus-jawa.html" class="small-btn">LIHAT</a>
+                </article>
+
+                <!-- Card 2: Bahasa Bali -->
+                <article class="course-card" id="bali">
+                    <img src="image/bali1.png" alt="Bahasa Bali">
+                    <h3>Bahasa Bali</h3>
+                    <p>Pelajari kosakata, percakapan dasar, dan tingkatan bahasa.</p>
+                    <a href="kursus-bali.html" class="small-btn">LIHAT</a>
+                </article>
+
+                <!-- Card 3: Bahasa Sunda -->
+                <article class="course-card" id="sunda">
+                    <img src="image/sunda1.png" alt="Bahasa Sunda">
+                    <h3>Bahasa Sunda</h3>
+                    <p>Kenali kosakata dan ungkapan sehari-hari dalam Bahasa Sunda.</p>
+                    <a href="kursus-sunda.html" class="small-btn">LIHAT</a>
+                </article>
+
+                <!-- Card 4: Bahasa Minangkabau -->
+                <article class="course-card">
+                    <img src="image/minangkabau.png" alt="Bahasa Minangkabau">
+                    <h3>Bahasa Minangkabau</h3>
+                    <p>Pelajari kosakata dan percakapan dasar bahasa Minangkabau.</p>
+                    <a href="#" class="small-btn">LIHAT</a>
+                </article>
+
+                <!-- Card 5: Bahasa Bugis -->
+                <article class="course-card">
+                    <img src="image/bugis.png" alt="Bahasa Bugis">
+                    <h3>Bahasa Bugis</h3>
+                    <p>Kenali kosakata dasar dan percakapan sehari-hari bahasa Bugis.</p>
+                    <a href="#" class="small-btn">LIHAT</a>
+                </article>
+
+                <!-- Card 6: Bahasa Madura -->
+                <article class="course-card">
+                    <img src="image/madura.png" alt="Bahasa Madura">
+                    <h3>Bahasa Madura</h3>
+                    <p>Pelajari tata bahasa dan ungkapan percakapan sehari-hari.</p>
+                    <a href="#" class="small-btn">LIHAT</a>
+                </article>
+
+                <!-- Card 7: Bahasa Batak -->
+                <article class="course-card">
+                    <img src="image/batak.png" alt="Bahasa Batak">
+                    <h3>Bahasa Batak</h3>
+                    <p>Kenali kosakata, sapaan, dan percakapan dasar bahasa Batak.</p>
+                    <a href="#" class="small-btn">LIHAT</a>
+                </article>
+
+                <!-- Card 8: Bahasa Toraja -->
+                <article class="course-card">
+                    <img src="image/toraja.png" alt="Bahasa Toraja">
+                    <h3>Bahasa Toraja</h3>
+                    <p>Pelajari kosakata dasar sambil mengenal budaya Toraja.</p>
+                    <a href="#" class="small-btn">LIHAT</a>
+                </article>
+
+                <!-- Card 9: Bahasa Aceh -->
+                <article class="course-card">
+                    <img src="image/aceh.png" alt="Bahasa Aceh">
+                    <h3>Bahasa Aceh</h3>
+                    <p>Pelajari kosakata dan percakapan dasar Bahasa Aceh.</p>
+                    <a href="#" class="small-btn">LIHAT</a>
+                </article>
+
+                <!-- Card 10: Bahasa Banjar -->
+                <article class="course-card">
+                    <img src="image/banjar.png" alt="Bahasa Banjar">
+                    <h3>Bahasa Banjar</h3>
+                    <p>Kenali kosakata dan ungkapan sehari-hari Bahasa Banjar.</p>
+                    <a href="#" class="small-btn">LIHAT</a>
+                </article>
+
+                <!-- Card 11: Bahasa Sasak -->
+                <article class="course-card">
+                    <img src="image/sasak.png" alt="Bahasa Sasak">
+                    <h3>Bahasa Sasak</h3>
+                    <p>Pelajari kosakata dasar dan percakapan bahasa Sasak.</p>
+                    <a href="#" class="small-btn">LIHAT</a>
+                </article>
+
+                <!-- Card 12: Bahasa Dayak -->
+                <article class="course-card">
+                    <img src="image/dayak.png" alt="Bahasa Dayak">
+                    <h3>Bahasa Dayak</h3>
+                    <p>Kenali kosakata sehari-hari sambil mengenal budaya Dayak.</p>
+                    <a href="#" class="small-btn">LIHAT</a>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-grid">
+
+            <!-- Kolom 1 -->
+            <div>
+                <img src="image/logo.png" class="footer-logo" alt="Logo Basa">
+                <p>Bersama melestarikan bahasa daerah, untuk Indonesia yang lebih berwarna.</p>
+                <p style="margin-top:20px;">◎ ♥ f</p>
+            </div>
+
+            <!-- Kolom 2 -->
+            <div>
+                <h4>For Clients</h4>
+                <p>
+                    <a href="index.html">Beranda</a><br>
+                    <a href="kursus.html">Kursus</a><br>
+                    <a href="index.html#komunitas">Komunitas</a><br>
+                    Contact Us
+                </p>
+            </div>
+
+            <!-- Kolom 3 -->
+            <div>
+                <h4>Contact Us</h4>
+                <p>
+                    Basa (Kak Bella)<br>
+                    basa.daerah@gmail.com<br>
+                    +628365154987<br>
+                    Malang, East Java, Indonesia
+                </p>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            2026 Learning app. All right reserved
+        </div>
+    </footer>
+
+</body>
+</html>
