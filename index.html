@@ -592,25 +592,33 @@
     </footer>
 
     <script>
-        const hamburger = document.getElementById("hamburger");
-        const navLinks = document.querySelector(".nav-links");
-        const languageToggle = document.getElementById("languageToggle");
-        const languageDropdown = document.getElementById("languageDropdown");
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    const languageToggle = document.getElementById("languageToggle");
+    const languageDropdown = document.getElementById("languageDropdown");
 
-        // Buka / tutup hamburger
-        hamburger.addEventListener("click", function () {
-            navLinks.classList.toggle("active");
+    // Buka / tutup hamburger
+    hamburger.addEventListener("click", function () {
 
-            if (!navLinks.classList.contains("active")) {
-                languageDropdown.classList.remove("active");
-            }
-        });
+        navLinks.classList.toggle("active");
 
-        // Buka / tutup dropdown Bahasa
-        languageToggle.addEventListener("click", function () {
-            languageDropdown.classList.toggle("active");
-        });
-    </script>
+        // Kalau menu ditutup, dropdown Bahasa ikut ditutup
+        if (!navLinks.classList.contains("active")) {
+            languageDropdown.classList.remove("active");
+        }
+    });
+
+
+    // Buka / tutup dropdown Bahasa
+    languageToggle.addEventListener("click", function (event) {
+
+        // Jangan sampai klik Bahasa dianggap sebagai klik menu lain
+        event.stopPropagation();
+
+        languageDropdown.classList.toggle("active");
+    });
+</script>
+
 
 </body>
 
