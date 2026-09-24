@@ -825,3 +825,144 @@ footer {
         gap: 35px;
     }
 }
+
+/* HAMBURGER MENU*/
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #1a4f8b;
+    padding: 5px;
+    line-height: 1;
+}
+
+
+/* Bahasa khusus mobile */
+.mobile-language {
+    display: none;
+}
+
+.language-toggle {
+    background: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #8fa8c3;
+    cursor: pointer;
+    padding: 8px 0;
+}
+
+.language-toggle span {
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+
+/* Dropdown Bahasa */
+.language-dropdown {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 5px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.language-dropdown.active {
+    display: flex;
+}
+
+.language-dropdown a {
+    width: 100%;
+    padding: 9px 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #6d91b6;
+}
+
+.language-dropdown a:hover {
+    background-color: #f2f6fa;
+    color: #c9272e;
+}
+
+
+/* RESPONSIVE HAMBURGER*/
+
+@media (max-width: 768px) {
+
+    .navbar {
+        width: 94%;
+        min-height: 55px;
+        margin-top: 12px;
+        padding: 0 18px;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 1001;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        width: 100%;
+        padding: 15px 20px;
+
+        background-color: white;
+        border-radius: 12px;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links > a {
+        width: 100%;
+        padding: 8px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    /* Sembunyikan select desktop */
+    .nav-select {
+        display: none;
+    }
+
+    /* Tampilkan Bahasa versi mobile */
+    .mobile-language {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .language-toggle {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .login-btn {
+        width: auto !important;
+        padding: 9px 25px !important;
+        margin-top: 5px;
+    }
+}
