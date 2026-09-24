@@ -17,7 +17,7 @@
     <!-- NAVBAR -->
     <header class="navbar">
 
-        <a href="home.html">
+        <a href="index.html">
             <img
                 src="image/logo.png"
                 class="logo"
@@ -25,22 +25,17 @@
             >
         </a>
 
-
-
         <nav class="nav-links">
 
-            
-            <a href="home.html">
+            <a href="index.html">
                 Beranda
             </a>
 
-
-            
+            <!-- Bahasa desktop -->
             <select
                 class="nav-select"
                 onchange="location.href=this.value"
             >
-
                 <option value="kursus.html">
                     Bahasa
                 </option>
@@ -64,25 +59,60 @@
                 <option value="kursus.html#sunda">
                     Bahasa Batak
                 </option>
-
             </select>
 
+            <!-- Bahasa untuk hamburger -->
+            <div class="mobile-language">
 
-           
+                <button class="language-toggle" id="languageToggle">
+                    Bahasa
+                    <span>⌄</span>
+                </button>
+
+                <div class="language-dropdown" id="languageDropdown">
+
+                    <a href="kursus.html#jawa">
+                        Bahasa Jawa
+                    </a>
+
+                    <a href="kursus.html#bali">
+                        Bahasa Bali
+                    </a>
+
+                    <a href="kursus.html#sunda">
+                        Bahasa Sunda
+                    </a>
+
+                    <a href="kursus.html#sunda">
+                        Bahasa Madura
+                    </a>
+
+                    <a href="kursus.html#sunda">
+                        Bahasa Batak
+                    </a>
+
+                </div>
+
+            </div>
+
             <a href="komunitas.html">
                 Komunitas
             </a>
 
-
-            
-            <a
-                href="login.html"
-                class="login-btn"
-            >
+            <a href="login.html" class="login-btn">
                 Masuk
             </a>
 
         </nav>
+
+        <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Buka menu"
+        >
+            ☰
+        </button>
+
 
     </header>
 
@@ -298,7 +328,7 @@
             <div>
                 <h4>Navigasi</h4>
                 <p>
-                    <a href="home.html">Beranda</a><br>
+                    <a href="index.html">Beranda</a><br>
                     <a href="kursus.html">Kursus</a><br>
                     <a href="komunitas.html">Komunitas</a>
                 </p>
@@ -331,6 +361,26 @@
                 btn.classList.remove("joined");
             }
         }
+
+        // Humburger
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.querySelector(".nav-links");
+        const languageToggle = document.getElementById("languageToggle");
+        const languageDropdown = document.getElementById("languageDropdown");
+
+        // Buka / tutup hamburger
+        hamburger.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+
+            if (!navLinks.classList.contains("active")) {
+                languageDropdown.classList.remove("active");
+            }
+        });
+
+        // Buka / tutup dropdown Bahasa
+        languageToggle.addEventListener("click", function () {
+            languageDropdown.classList.toggle("active");
+        });
     </script>
 
 </body>
